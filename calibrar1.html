@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calibrar Pantallas - PROINCORP EIRL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        var i = 0;
+        var images = ["images/prueba_1.jpg", "images/calibra_1.jpg"]; // Ruta de cada imagen que quieres mostrar
+        setInterval(function() {
+            i = (i + 1) % images.length;
+            document.getElementById("img1").src = images[i];
+            document.getElementById("img2").src = images[(i+1)%images.length];
+        }, 5000);
+    </script>
+</head>
+<body style="position:relative;">
+    <img id="img1" src="images/prueba_1.jpg" alt="Prueba 1" width="640" height="160" style="position:absolute; top:0; left:0;">
+    <img id="img2" src="images/calibra_1.jpg" alt="Prueba 2" width="640" height="160" style="position:absolute; top:0; left:640px;">
+</body>
+</html>
+
